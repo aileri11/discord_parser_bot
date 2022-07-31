@@ -30,4 +30,12 @@ void main() {
       Logger().d(sp.find('div', id: 'graphDD5')?.getText());
     });
   });
+  group('func test', () {
+    setUp( () async {
+      await envSetUp('https://www.leagueofgraphs.com/summoner/ru/huetao');
+    });
+    test('parse SoloqTier', () {
+      Logger().d(parseSoloqTier());
+    });
+  });
 }
