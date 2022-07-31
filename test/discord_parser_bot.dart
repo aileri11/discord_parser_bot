@@ -37,5 +37,20 @@ void main() {
     test('parse SoloqTier', () {
       Logger().d(parseSoloqTier());
     });
+    test('parseFlexTier', () {
+      Logger().d(parseFlexTier());
+    });
+    test('parse avg soloq kda', () {
+      Logger().d(parseSoloqKda(HTML: resp!.data));
+    });
+    test('parse soloq amount of games', (){
+      Logger().d(parseSoloqGames());
+    });
+    test('parse soloq winrate', () {
+      Logger().d(parseSoloqWinrate());
+    });
+    test('parse soloq stats(amount of games, winrate, kda)', () {
+      Logger().d(parseSoloqStats());
+    });
   });
 }
